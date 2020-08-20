@@ -1,0 +1,3 @@
+include ':gysdklibrary'
+include ':app'
+rootProject.name = "AndroidGameSDK"
