@@ -2,8 +2,7 @@ package guangyu.sdk.lib.ui.login;
 
 import android.view.KeyEvent;
 
-import com.gysdk.common.R;
-
+import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseViewGroup;
 import guangyu.sdk.lib.base.GYBaseActivity;
 import guangyu.sdk.lib.ui.register.RegisterView;

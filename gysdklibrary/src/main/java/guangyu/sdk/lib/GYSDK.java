@@ -13,6 +13,11 @@ import guangyu.sdk.lib.ui.login.GYLoginActivity;
 public class GYSDK {
 
 
+
+
+
+
+
     public static void autoLogin(Activity activity) {
         if (null != activity) {
             Intent intent = new Intent(activity, GYLoginActivity.class);

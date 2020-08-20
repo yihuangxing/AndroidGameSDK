@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.gysdk.common.R;
+import guangyu.sdk.lib.R;
+
 
 /**
  * author : yi.huangxing

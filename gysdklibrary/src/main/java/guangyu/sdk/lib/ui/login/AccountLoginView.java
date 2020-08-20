@@ -3,8 +3,7 @@ package guangyu.sdk.lib.ui.login;
 
 import android.content.Context;
 
-import com.gysdk.common.R;
-
+import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseLinearLayout;
 
 /**
