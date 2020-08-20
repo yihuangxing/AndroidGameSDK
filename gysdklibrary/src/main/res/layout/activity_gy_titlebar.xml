@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context="guangyu.sdk.lib.ui.login.GYLoginActivity">
 
 
@@ -36,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:gravity="center"
-                android:text="添加" />
+                android:text="关闭" />
         </RelativeLayout>
 
 

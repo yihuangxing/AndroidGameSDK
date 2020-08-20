@@ -15,6 +15,7 @@ public abstract class GYBaseActivity extends IBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutView());
         findViewById();
+        initView();
         setOnclickListener();
 
     }
@@ -22,6 +23,8 @@ public abstract class GYBaseActivity extends IBaseActivity {
     protected abstract int getLayoutView();
 
     protected abstract void findViewById();
+
+    protected abstract void initView();
 
     protected abstract void setOnclickListener();
 }

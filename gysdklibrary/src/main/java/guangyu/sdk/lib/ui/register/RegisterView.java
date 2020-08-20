@@ -20,4 +20,14 @@ public class RegisterView extends BaseLinearLayout {
     protected int getLayoutView() {
         return R.layout.activity_gy_register;
     }
+
+    @Override
+    protected void findViewById() {
+
+    }
+
+    @Override
+    protected void setListener() {
+
+    }
 }

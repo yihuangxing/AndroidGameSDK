@@ -9,6 +9,8 @@ import guangyu.sdk.lib.ui.register.RegisterView;
 
 public class GYLoginActivity extends GYBaseActivity {
     private BaseViewGroup mBaseViewGroup;
+    private AccountLoginView mAccountLoginView;
+    private RegisterView mRegisterView;
 
     @Override
     protected int getLayoutView() {
@@ -19,9 +21,15 @@ public class GYLoginActivity extends GYBaseActivity {
     protected void findViewById() {
         mBaseViewGroup = findViewById(R.id.mgygamesdk_group);
 
+
+    }
+
+    @Override
+    protected void initView() {
+        mRegisterView = new RegisterView(mContext);
         //默认添加账号登录页面
-        AccountLoginView accountLoginView = new AccountLoginView(mContext);
-        updateView(accountLoginView, mBaseViewGroup.getLayoutContent());
+        mAccountLoginView = new AccountLoginView(mContext);
+        updateView(mAccountLoginView, mBaseViewGroup.getLayoutContent());
     }
 
 
@@ -36,10 +44,23 @@ public class GYLoginActivity extends GYBaseActivity {
 
                 @Override
                 public void onBtnClose() {
-                    RegisterView registerView = new RegisterView(mContext);
-                    updateView(registerView, mBaseViewGroup.getLayoutContent());
+                    finish();
                 }
             });
+        }
+        if (null != mAccountLoginView) {
+            mAccountLoginView.setAccountLoginListener(new AccountLoginView.AccountLoginListener() {
+                @Override
+                public void onBtnLogin() {
+
+                }
+
+                @Override
+                public void onBtnRegister() {
+                    updateView(mRegisterView, mBaseViewGroup.getLayoutContent());
+                }
+            });
+
         }
     }
 

@@ -3,7 +3,6 @@ package guangyu.sdk.lib.base;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.LinearLayout;
 
 /**
@@ -26,7 +25,17 @@ public abstract class BaseLinearLayout extends LinearLayout {
         super(context, attrs, defStyleAttr);
         mInflater = LayoutInflater.from(context);
         addView(mInflater.inflate(getLayoutView(), null));
+
+        findViewById();
+
+        setListener();
     }
 
     protected abstract int getLayoutView();
+
+
+    protected abstract void findViewById();
+
+
+    protected abstract  void setListener();
 }
