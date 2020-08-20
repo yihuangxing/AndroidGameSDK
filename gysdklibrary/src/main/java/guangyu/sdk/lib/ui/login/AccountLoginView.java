@@ -4,6 +4,7 @@ package guangyu.sdk.lib.ui.login;
 import android.content.Context;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseLinearLayout;
@@ -16,6 +17,7 @@ import guangyu.sdk.lib.base.BaseLinearLayout;
 public class AccountLoginView extends BaseLinearLayout implements View.OnClickListener {
     private Button mBtnLogin;
     private Button mBtnRegister;
+    private TextView mTvForgetPwd;
 
     public AccountLoginView(Context context) {
         super(context);
@@ -30,12 +32,14 @@ public class AccountLoginView extends BaseLinearLayout implements View.OnClickLi
     protected void findViewById() {
         mBtnLogin = findViewById(R.id.mgygamesdk_btn_account_login);
         mBtnRegister = findViewById(R.id.mgygamesdk_btn_account_register);
+        mTvForgetPwd = findViewById(R.id.mgygamesdk_forgetpwd);
     }
 
     @Override
     protected void setListener() {
         mBtnLogin.setOnClickListener(this);
         mBtnRegister.setOnClickListener(this);
+        mTvForgetPwd.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +52,10 @@ public class AccountLoginView extends BaseLinearLayout implements View.OnClickLi
         } else if (id == R.id.mgygamesdk_btn_account_register) {
             if (null != mBtnRegister && null != mAccountLoginListener) {
                 mAccountLoginListener.onBtnRegister();
+            }
+        } else if (id == R.id.mgygamesdk_forgetpwd) {
+            if (null != mTvForgetPwd && null != mAccountLoginListener) {
+                mAccountLoginListener.onBtnForgetPwd();
             }
         }
     }
@@ -63,5 +71,7 @@ public class AccountLoginView extends BaseLinearLayout implements View.OnClickLi
         void onBtnLogin();
 
         void onBtnRegister();
+
+        void onBtnForgetPwd();
     }
 }

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ff1f1f23"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,11 +17,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#222"
+            android:background="#ffffff"
             android:gravity="center"
             android:onClick="autoLogin"
             android:text="自动登录"
-            android:textColor="#fff"
+            android:textColor="#222"
             android:textSize="20dp" />
 
         <TextView
@@ -27,11 +29,40 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:background="#222"
+            android:background="#fff"
             android:gravity="center"
             android:onClick="autoLogin"
             android:text="注册"
-            android:textColor="#fff"
+            android:textColor="#222"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:onClick="screenSwitch"
+            android:text="横竖屏切换"
+            android:textColor="#222"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="。。。"
+            android:textColor="#222"
             android:textSize="20dp" />
     </LinearLayout>
 

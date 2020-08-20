@@ -1,10 +1,12 @@
 package guangyu.sdk.lib.ui.login;
 
+import android.content.Intent;
 import android.view.KeyEvent;
 
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseViewGroup;
 import guangyu.sdk.lib.base.GYBaseActivity;
+import guangyu.sdk.lib.ui.forgetpwd.GYForgetPwdActivity;
 import guangyu.sdk.lib.ui.register.RegisterView;
 
 public class GYLoginActivity extends GYBaseActivity {
@@ -58,6 +60,12 @@ public class GYLoginActivity extends GYBaseActivity {
                 @Override
                 public void onBtnRegister() {
                     updateView(mRegisterView, mBaseViewGroup.getLayoutContent());
+                }
+
+                @Override
+                public void onBtnForgetPwd() {
+                    Intent intent = new Intent(mContext, GYForgetPwdActivity.class);
+                    startActivity(intent);
                 }
             });
 

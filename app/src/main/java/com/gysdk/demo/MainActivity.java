@@ -19,4 +19,7 @@ public class MainActivity extends Activity {
     public void autoLogin(View view) {
         GYSDK.autoLogin(this);
     }
+    public void screenSwitch(View view){
+
+    }
 }

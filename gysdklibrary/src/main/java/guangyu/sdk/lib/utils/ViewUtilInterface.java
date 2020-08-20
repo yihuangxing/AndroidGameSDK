@@ -1,4 +1,4 @@
-package guangyu.sdk.lib;
+package guangyu.sdk.lib.utils;
 
 import android.content.Context;
 import android.view.View;

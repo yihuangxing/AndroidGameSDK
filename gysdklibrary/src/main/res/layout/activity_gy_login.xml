@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#FF7F24"
     tools:context="guangyu.sdk.lib.ui.login.GYLoginActivity">
 
 
