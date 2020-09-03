@@ -55,10 +55,14 @@ public class GYSDK {
     }
 
 
+    /**
+     * 自动登录
+     */
     public static void autoLogin(Activity activity) {
         if (null != activity) {
             Intent intent = new Intent(activity, GYLoginActivity.class);
             activity.startActivity(intent);
         }
     }
+
 }

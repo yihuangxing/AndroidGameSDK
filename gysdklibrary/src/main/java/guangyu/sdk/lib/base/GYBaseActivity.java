@@ -1,6 +1,7 @@
 package guangyu.sdk.lib.base;
 
 import android.os.Bundle;
+import android.util.Log;
 
 /**
  * author : yi.huangxing
@@ -19,6 +20,7 @@ public abstract class GYBaseActivity extends IBaseActivity {
         setOnclickListener();
 
     }
+
 
     protected abstract int getLayoutView();
 

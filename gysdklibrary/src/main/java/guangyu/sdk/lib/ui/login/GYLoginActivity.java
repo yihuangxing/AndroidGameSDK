@@ -1,8 +1,10 @@
 package guangyu.sdk.lib.ui.login;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.view.KeyEvent;
 
+import guangyu.sdk.lib.GYSDKConfig;
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseViewGroup;
 import guangyu.sdk.lib.base.GYBaseActivity;
