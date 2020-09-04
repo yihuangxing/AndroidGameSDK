@@ -20,17 +20,19 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
             android:gravity="center"
-            android:text="账号登录"
+            android:text="账号注册"
             android:textSize="20dp" />
 
         <guangyu.sdk.lib.view.ClearEditText
             android:layout_width="match_parent"
-            android:layout_height="45dp" />
+            android:layout_height="45dp"
+            android:imeOptions="flagNoExtractUi" />
 
 
         <guangyu.sdk.lib.view.ClearEditText
             android:layout_width="match_parent"
-            android:layout_height="45dp" />
+            android:layout_height="45dp"
+            android:imeOptions="flagNoExtractUi" />
 
 
         <Button

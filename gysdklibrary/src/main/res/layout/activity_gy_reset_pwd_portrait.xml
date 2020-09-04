@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF7F24"
-    tools:context=".ui.forgetpwd.GYForgetPwdActivity">
+    android:background="#FF7F24">
 
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重置密码竖屏"
+        android:textColor="#222"
+        android:textSize="30dp" />
 
 
 </LinearLayout>

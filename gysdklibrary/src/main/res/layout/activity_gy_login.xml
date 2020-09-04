@@ -4,17 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="#FF7F24"
-    tools:context="guangyu.sdk.lib.ui.login.GYLoginActivity">
+    android:gravity="center">
 
 
     <guangyu.sdk.lib.base.BaseViewGroup
-        android:id="@+id/mgygamesdk_group"
+        android:id="@+id/gygamesdk_group"
         android:layout_width="320dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
 
     </guangyu.sdk.lib.base.BaseViewGroup>
+
+
+    <include
+        android:id="@+id/gygamesdk_reset_pwd_layout"
+        layout="@layout/activity_gy_reset_pwd_landscape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

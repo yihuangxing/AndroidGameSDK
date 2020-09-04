@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!--      add view content-->
         <RelativeLayout
             android:id="@+id/mgygamesdk_content"
             android:layout_width="match_parent"
-            android:layout_height="340dp" />
+            android:layout_height="wrap_content" />
 
         <RelativeLayout
             android:id="@+id/gygamesdk_titleLayout"

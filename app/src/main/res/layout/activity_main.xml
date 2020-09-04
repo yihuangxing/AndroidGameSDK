@@ -55,13 +55,14 @@
             android:textSize="20dp" />
 
         <TextView
+            android:onClick="userCenter"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:background="#222"
             android:gravity="center"
-            android:text="。。。"
+            android:text="个人中心"
             android:textColor="#fff"
             android:textSize="20dp" />
     </LinearLayout>

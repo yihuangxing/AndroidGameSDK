@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Intent;
 
 import guangyu.sdk.lib.ui.login.GYLoginActivity;
+import guangyu.sdk.lib.ui.usercenter.GYUserCenterActivity;
 
 /**
  * author : yi.huangxing
@@ -61,6 +62,15 @@ public class GYSDK {
     public static void autoLogin(Activity activity) {
         if (null != activity) {
             Intent intent = new Intent(activity, GYLoginActivity.class);
+            activity.startActivity(intent);
+        }
+    }
+    /**
+     * 个人中心
+     */
+    public static void userCenter(Activity activity){
+        if (null!=activity){
+            Intent intent = new Intent(activity, GYUserCenterActivity.class);
             activity.startActivity(intent);
         }
     }
