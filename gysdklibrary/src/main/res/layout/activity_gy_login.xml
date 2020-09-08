@@ -16,12 +16,6 @@
     </guangyu.sdk.lib.base.BaseViewGroup>
 
 
-    <include
-        android:id="@+id/gygamesdk_reset_pwd_layout"
-        layout="@layout/activity_gy_reset_pwd_landscape"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
 
 
 </RelativeLayout>

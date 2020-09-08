@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".ui.login.GYExitActivity">
+
+
+    <guangyu.sdk.lib.view.cardview.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="退出游戏"
+                android:textColor="@color/color_0cacff"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:gravity="center"
+                android:text="确定退出游戏吗？"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/gygamesdk_gameout_comfirm"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/gy_exit_comfirm_selector"
+                    android:text="确定"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/gygamesdk_gameout_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/gy_exit_cancel_shape"
+                    android:text="取消"
+                    android:textColor="@color/color_0cacff" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </guangyu.sdk.lib.view.cardview.CardView>
+
+</RelativeLayout>

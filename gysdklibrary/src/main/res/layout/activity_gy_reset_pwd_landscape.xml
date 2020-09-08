@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF7F24">
+    android:background="@color/white"
+    tools:context=".ui.usercenter.GYUserCenterActivity">
 
 
-    <TextView
+    <!--    app:cardElevation="12dp"设置阴影-->
+    <guangyu.sdk.lib.view.cardview.CardView
+        android:id="@+id/gygamesdk_left_navigation"
+        android:layout_width="78dp"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="12dp">
+
+        <include
+            layout="@layout/activity_left_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </guangyu.sdk.lib.view.cardview.CardView>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:textColor="#222"
-        android:text="重置密码横屏" />
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/gygamesdk_left_navigation"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="这是内容"
+            android:textColor="#333"
+            android:textSize="30sp" />
+    </RelativeLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

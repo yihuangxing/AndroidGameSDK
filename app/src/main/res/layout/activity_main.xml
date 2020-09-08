@@ -55,14 +55,42 @@
             android:textSize="20dp" />
 
         <TextView
-            android:onClick="userCenter"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:background="#222"
             android:gravity="center"
+            android:onClick="userCenter"
             android:text="个人中心"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#222"
+            android:gravity="center"
+            android:onClick="onExitSDK"
+            android:text="退出游戏"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#222"
+            android:gravity="center"
+            android:text="。。。"
             android:textColor="#fff"
             android:textSize="20dp" />
     </LinearLayout>

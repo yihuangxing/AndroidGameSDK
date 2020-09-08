@@ -5,9 +5,13 @@ import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import guangyu.sdk.lib.GYSDK;
 import guangyu.sdk.lib.GYSDKConfig;
+import guangyu.sdk.lib.notify.GYExitCallBack;
+import guangyu.sdk.lib.notify.GYLoginCallBack;
+import guangyu.sdk.lib.notify.GYUserCenterCallBack;
 
 public class MainActivity extends Activity {
 
@@ -26,7 +30,17 @@ public class MainActivity extends Activity {
 
 
     public void autoLogin(View view) {
-        GYSDK.autoLogin(this);
+        GYSDK.autoLogin(this, new GYLoginCallBack() {
+            @Override
+            public void loginOnSuccess(String response) {
+
+            }
+
+            @Override
+            public void loginOnFail(String fail) {
+
+            }
+        });
     }
 
     public void screenSwitch(View view) {
@@ -34,7 +48,33 @@ public class MainActivity extends Activity {
 
 
     public void userCenter(View view) {
-        GYSDK.userCenter(this);
+        GYSDK.userCenter(this, new GYUserCenterCallBack() {
+            @Override
+            public void userCenterOnSuccess(String response) {
+                Toast.makeText(MainActivity.this, response, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void userCenterOnFail(String fail) {
+
+            }
+        });
+    }
+
+    public void onExitSDK(View view) {
+        GYSDK.exitSDK(this, new GYExitCallBack() {
+            @Override
+            public void exitOnSuccess(String response) {
+                System.exit(0);
+            }
+
+            @Override
+            public void exitOnCancel(String cancel) {
+                Toast.makeText(MainActivity.this, cancel, Toast.LENGTH_SHORT).show();
+            }
+
+
+        });
     }
 
 }

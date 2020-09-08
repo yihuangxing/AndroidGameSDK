@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 选中时的颜色为蓝色-->
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/gy_image_back_ed"/>
+    <!-- 松手后的颜色为白色  默认时-->
+    <item
+        android:state_enabled="true"
+        android:state_pressed="false"
+        android:drawable="@drawable/gy_image_back"/>
+</selector>

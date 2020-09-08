@@ -13,8 +13,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        new GYSDK.Builder(this, false)
-                .setDebug(true)
+        new GYSDK.Builder(this, true)
+                .setDebug(false)
                 .setAppKey("111111")
                 .setSlug("android")
                 .build();
