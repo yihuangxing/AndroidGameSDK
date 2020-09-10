@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.Image;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 
 import guangyu.sdk.lib.utils.ViewUtil;
 
@@ -29,15 +33,15 @@ public class IBaseActivity extends Activity {
     }
 
 
-    protected void updateView(View view, ViewGroup layout) {
+    protected void updateView(View view, ViewGroup layout, ImageView back) {
         if (null != mContext && null != mViewUtil) {
-            mViewUtil.updateView(mContext, view, layout);
+            mViewUtil.updateView(mContext, view, layout,back);
         }
     }
 
-    protected boolean removeTopView(ViewGroup layout) {
+    protected boolean removeTopView(ViewGroup layout,ImageView back) {
         if (null != mContext && null != mViewUtil) {
-            return mViewUtil.removeTopView(layout);
+            return mViewUtil.removeTopView(layout,back);
         }
         return false;
     }
@@ -67,5 +71,18 @@ public class IBaseActivity extends Activity {
         }
         return res;
     }
+
+    //点击空白处收起键盘
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (getCurrentFocus() != null && getCurrentFocus().getWindowToken() != null && imm != null) {
+                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        }
+        return true;
+    }
+
 
 }

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context="guangyu.sdk.lib.ui.login.GYLoginActivity">
+    android:background="@drawable/gy_viewgrop_bg_shape">
 
 
     <RelativeLayout
@@ -17,28 +16,25 @@
         <RelativeLayout
             android:id="@+id/mgygamesdk_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:padding="20dp" />
 
         <RelativeLayout
             android:id="@+id/gygamesdk_titleLayout"
             android:layout_width="match_parent"
             android:layout_height="50dp">
 
-            <Button
+            <ImageView
                 android:id="@+id/mgygamesdk_btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="返回" />
+                style="@style/gygamesdk_btn_back_style"
+                android:src="@drawable/gy_back_selector"
+                android:visibility="gone" />
 
 
-            <Button
+            <ImageView
                 android:id="@+id/mgygamesdk_btn_close"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:gravity="center"
-                android:text="关闭" />
+                style="@style/gygamesdk_btn_close_style"
+                android:src="@drawable/gy_close_selector" />
         </RelativeLayout>
 
 

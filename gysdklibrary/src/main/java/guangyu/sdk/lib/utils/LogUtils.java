@@ -2,7 +2,6 @@ package guangyu.sdk.lib.utils;
 
 import android.util.Log;
 
-import guangyu.sdk.lib.BuildConfig;
 import guangyu.sdk.lib.GYSDKConfig;
 
 /**

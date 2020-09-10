@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
+import guangyu.sdk.lib.utils.ToastUitls;
+
 /**
  * author : yi.huangxing
  * date   : 2020/8/20/0020  11:21
@@ -12,6 +14,7 @@ import android.widget.LinearLayout;
  */
 public abstract class BaseLinearLayout extends LinearLayout {
     protected LayoutInflater mInflater;
+    protected  Context mContext;
 
     public BaseLinearLayout(Context context) {
         this(context, null);
@@ -23,9 +26,11 @@ public abstract class BaseLinearLayout extends LinearLayout {
 
     public BaseLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        this.mContext =context;
         mInflater = LayoutInflater.from(context);
-        addView(mInflater.inflate(getLayoutView(), null));
-
+        if (getLayoutView()>0){
+            addView(mInflater.inflate(getLayoutView(), null));
+        }
         findViewById();
 
         setListener();
@@ -38,4 +43,14 @@ public abstract class BaseLinearLayout extends LinearLayout {
 
 
     protected abstract  void setListener();
+
+
+    /**
+     *  Toast
+     */
+    protected  void  BastToast(String msg){
+        if (null!=mContext){
+            ToastUitls.show(mContext,msg);
+        }
+    }
 }

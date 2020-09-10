@@ -1,12 +1,10 @@
 package guangyu.sdk.lib.ui.login;
-
 import android.view.View;
 import android.widget.Button;
-
 import guangyu.sdk.lib.GYSDKConfig;
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.GYBaseActivity;
-import guangyu.sdk.lib.notify.CallBackManager;
+import guangyu.sdk.lib.CallBackManager;
 import guangyu.sdk.lib.notify.GYExitCallBack;
 
 /**

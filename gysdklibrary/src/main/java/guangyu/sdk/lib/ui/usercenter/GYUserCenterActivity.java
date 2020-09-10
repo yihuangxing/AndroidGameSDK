@@ -4,10 +4,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import guangyu.sdk.lib.GYSDK;
 import guangyu.sdk.lib.GYSDKConfig;
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.GYBaseActivity;
-import guangyu.sdk.lib.notify.CallBackManager;
+import guangyu.sdk.lib.CallBackManager;
 import guangyu.sdk.lib.notify.GYUserCenterCallBack;
 
 /**
@@ -19,7 +20,7 @@ public class GYUserCenterActivity extends GYBaseActivity {
 
     @Override
     protected int getLayoutView() {
-        return GYSDKConfig.ORIENTATION ? R.layout.activity_gy_user_center_portrait : R.layout.activity_gy_user_center_landscape;
+        return GYSDK.ORIENTATION ? R.layout.activity_gy_user_center_portrait : R.layout.activity_gy_user_center_landscape;
     }
 
     @Override

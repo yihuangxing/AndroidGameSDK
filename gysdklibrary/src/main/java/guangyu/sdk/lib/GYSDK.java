@@ -4,12 +4,13 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
 
-import guangyu.sdk.lib.notify.CallBackManager;
 import guangyu.sdk.lib.notify.GYExitCallBack;
 import guangyu.sdk.lib.notify.GYLoginCallBack;
+import guangyu.sdk.lib.notify.GYRealNameCallBack;
 import guangyu.sdk.lib.notify.GYUserCenterCallBack;
 import guangyu.sdk.lib.ui.login.GYExitActivity;
 import guangyu.sdk.lib.ui.login.GYLoginActivity;
+import guangyu.sdk.lib.ui.realname.GYRealNameActivity;
 import guangyu.sdk.lib.ui.usercenter.GYUserCenterActivity;
 
 /**
@@ -18,45 +19,32 @@ import guangyu.sdk.lib.ui.usercenter.GYUserCenterActivity;
  * desc   :
  */
 public class GYSDK {
+    //默认竖屏
+    public static boolean ORIENTATION;
 
-    private GYSDK(Builder builder) {
-        GYSDKConfig.APP_KEY = builder.appKey;
-        GYSDKConfig.APP_SLUG = builder.slug;
-        GYSDKConfig.ORIENTATION = builder.orientation;
-        GYSDKConfig.DEBUG = builder.debug;
+    /**
+     * @param application 上线文
+     * @param appKey
+     * @param appSecret
+     * @param slug
+     * @param orientation 默认false为竖屏
+     */
+    public static void init(Application application, String appKey, String appSecret, String slug, boolean orientation) {
+        GYSDKConfig.APP_KEY = appKey;
+        GYSDKConfig.APP_SECRET = appSecret;
+        GYSDKConfig.APP_SLUG = slug;
+        GYSDK.ORIENTATION = orientation;
+        initSomething(application);
+    }
+    private static void initSomething(Application application) {
+
     }
 
-    public static class Builder {
-        private String appKey;
-        private String slug;
-        private Application mApplication;
-        private boolean orientation;
-        private boolean debug;
-
-        //把必参 ，可选参数分开，很重要哦
-        public Builder(Application application, boolean orientation) {
-            this.mApplication = application;
-            this.orientation = orientation;
-        }
-
-        public Builder setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-
-        public Builder setSlug(String slug) {
-            this.slug = slug;
-            return this;
-        }
-
-        public Builder setDebug(boolean debug) {
-            this.debug = debug;
-            return this;
-        }
-
-        public GYSDK build() {
-            return new GYSDK(this);
-        }
+    /**
+     * 是否打印日志，请在init 之前调用，默认开启打印日志，上线关闭
+     */
+    public static void setDebug(boolean debug) {
+        GYSDKConfig.DEBUG = debug;
     }
 
 
@@ -78,6 +66,14 @@ public class GYSDK {
         if (null != activity) {
             Intent intent = new Intent(activity, GYUserCenterActivity.class);
             CallBackManager.setGYUserCenterCallBack(userCenterCallBack);
+            activity.startActivity(intent);
+        }
+    }
+
+    public static void realName(Activity activity, GYRealNameCallBack realNameCallBack){
+        if (null != activity) {
+            Intent intent = new Intent(activity, GYRealNameActivity.class);
+            CallBackManager.setGYRealNameCallBack(realNameCallBack);
             activity.startActivity(intent);
         }
     }

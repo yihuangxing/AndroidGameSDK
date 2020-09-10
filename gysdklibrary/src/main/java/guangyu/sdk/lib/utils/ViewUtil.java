@@ -3,6 +3,7 @@ package guangyu.sdk.lib.utils;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.Stack;
 
@@ -21,7 +22,7 @@ public class ViewUtil implements ViewUtilInterface {
     }
 
     @Override
-    public void updateView(Context context, View view, ViewGroup layout) {
+    public void updateView(Context context, View view, ViewGroup layout, ImageView back) {
         boolean isHas = false;
         if (null == mViews) {
             mViews = new Stack<View>();
@@ -36,24 +37,33 @@ public class ViewUtil implements ViewUtilInterface {
                 }
             }
         }
+        if (null != mViews && mViews.size() > 0) {
+            if (null != back) {
+                back.setVisibility(View.VISIBLE);
+            }
+        }
 
         if (!isHas) {
             layout.addView(view);
             mViews.add(view);
         }
     }
+
     @Override
     public int getViewNum() {
         return null == mViews ? 0 : mViews.size();
     }
 
     @Override
-    public boolean removeTopView(ViewGroup layout) {
+    public boolean removeTopView(ViewGroup layout, ImageView back) {
         if (null != mViews) {
             if (mViews.size() > 1) {
                 layout.removeView(mViews.get(mViews.size() - 1));
                 mViews.remove(mViews.size() - 1);
                 mViews.get(mViews.size() - 1).setVisibility(View.VISIBLE);
+                if (null != back && mViews.size() == 1) {
+                    back.setVisibility(View.GONE);
+                }
                 return true;
             } else {
                 return false;

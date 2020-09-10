@@ -2,7 +2,6 @@ package guangyu.sdk.lib.ui.login;
 
 import android.content.Intent;
 import android.view.KeyEvent;
-import android.widget.LinearLayout;
 
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.BaseViewGroup;
@@ -28,10 +27,12 @@ public class GYLoginActivity extends GYBaseActivity {
 
     @Override
     protected void initView() {
-        //默认添加账号登录页面
         mAccountLoginView = new AccountLoginView(mContext);
-        updateView(mAccountLoginView, mBaseViewGroup.getLayoutContent());
         mRegisterView = new RegisterView(mContext);
+        //默认添加账号登录页面
+        if (null!=mBaseViewGroup){
+            updateView(mAccountLoginView, mBaseViewGroup.getLayoutContent(), mBaseViewGroup.getButtonBack());
+        }
     }
 
 
@@ -41,7 +42,8 @@ public class GYLoginActivity extends GYBaseActivity {
             mBaseViewGroup.setBaseViewGroupListener(new BaseViewGroup.BaseViewGroupListener() {
                 @Override
                 public void onBtnBack() {
-                    removeTopView(mBaseViewGroup.getLayoutContent());
+
+                    removeTopView(mBaseViewGroup.getLayoutContent(), mBaseViewGroup.getButtonBack());
                 }
 
                 @Override
@@ -54,12 +56,12 @@ public class GYLoginActivity extends GYBaseActivity {
             mAccountLoginView.setAccountLoginListener(new AccountLoginView.AccountLoginListener() {
                 @Override
                 public void onBtnLogin() {
-
+                    BaseToast("登录成功啦！！！");
                 }
 
                 @Override
                 public void onBtnRegister() {
-                    updateView(mRegisterView, mBaseViewGroup.getLayoutContent());
+                    updateView(mRegisterView, mBaseViewGroup.getLayoutContent(), mBaseViewGroup.getButtonBack());
                 }
 
                 @Override
@@ -74,7 +76,7 @@ public class GYLoginActivity extends GYBaseActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        boolean isTopview = removeTopView(mBaseViewGroup.getLayoutContent());
+        boolean isTopview = removeTopView(mBaseViewGroup.getLayoutContent(), mBaseViewGroup.getButtonBack());
         if (!isTopview) {
             finish();
         }

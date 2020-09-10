@@ -1,7 +1,8 @@
 package guangyu.sdk.lib.base;
 
 import android.os.Bundle;
-import android.util.Log;
+
+import guangyu.sdk.lib.utils.ToastUitls;
 
 /**
  * author : yi.huangxing
@@ -14,11 +15,26 @@ public abstract class GYBaseActivity extends IBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutView());
+        if (getLayoutView() > 0) {
+            setContentView(getLayoutView());
+        }
+
         findViewById();
         initView();
         setOnclickListener();
 
+    }
+
+    /**
+     *  Toast
+     */
+    protected  void  BaseToast(final String msg){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastUitls.show(mContext,msg);
+            }
+        });
     }
 
 

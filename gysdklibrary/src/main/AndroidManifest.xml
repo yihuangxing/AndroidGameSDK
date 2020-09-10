@@ -32,13 +32,16 @@
             android:launchMode="singleTop"
             android:screenOrientation="sensor"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-        <activity android:name=".ui.login.GYExitActivity"
+        <activity android:name=".ui.realname.GYRealNameActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/gygamesdk_customDialog"/>
+        <activity
+            android:name=".ui.login.GYExitActivity"
             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="sensor"
-            android:theme="@style/gygamesdk_customDialog"
-            />
+            android:theme="@style/gygamesdk_customDialog" />
     </application>
 
 </manifest>

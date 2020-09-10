@@ -1,98 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#ff1f1f23"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_margin="20dp">
+        android:layout_marginTop="18dp"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="#222"
             android:gravity="center"
             android:onClick="autoLogin"
             android:text="自动登录"
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="18dp"
             android:background="#222"
             android:gravity="center"
             android:onClick="autoLogin"
             android:text="注册"
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_margin="20dp">
+        android:layout_margin="18dp"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="#222"
             android:gravity="center"
             android:onClick="screenSwitch"
-            android:text="横竖屏切换"
+            android:text="...."
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="18dp"
+
             android:background="#222"
             android:gravity="center"
             android:onClick="userCenter"
             android:text="个人中心"
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_margin="20dp">
+        android:gravity="center">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="#222"
             android:gravity="center"
             android:onClick="onExitSDK"
             android:text="退出游戏"
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
+            android:layout_marginLeft="18dp"
+
             android:background="#222"
             android:gravity="center"
-            android:text="。。。"
+            android:text="创建角色"
             android:textColor="#fff"
-            android:textSize="20dp" />
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="18dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="#222"
+            android:gravity="center"
+            android:text="主播抽奖"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:background="#222"
+            android:gravity="center"
+            android:text="等级推送"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center">
+
+        <TextView
+            android:onClick="realName"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="#222"
+            android:gravity="center"
+            android:text="实名认证"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:background="#222"
+            android:gravity="center"
+            android:text="登出"
+            android:textColor="#fff"
+            android:textSize="18dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import guangyu.sdk.lib.GYSDK;
-import guangyu.sdk.lib.GYSDKConfig;
 import guangyu.sdk.lib.notify.GYExitCallBack;
 import guangyu.sdk.lib.notify.GYLoginCallBack;
+import guangyu.sdk.lib.notify.GYRealNameCallBack;
 import guangyu.sdk.lib.notify.GYUserCenterCallBack;
 
 public class MainActivity extends Activity {
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         ImmersionBar.with(this);
         setContentView(R.layout.activity_main);
         //
-        if (GYSDKConfig.ORIENTATION) {
+        if (GYSDK.ORIENTATION) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         } else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -61,10 +61,25 @@ public class MainActivity extends Activity {
         });
     }
 
+    public void realName(View view){
+        GYSDK.realName(this, new GYRealNameCallBack() {
+            @Override
+            public void realNameOnSuccess(String response) {
+
+            }
+
+            @Override
+            public void realNameOnFail(String fail) {
+
+            }
+        });
+    }
+
     public void onExitSDK(View view) {
         GYSDK.exitSDK(this, new GYExitCallBack() {
             @Override
             public void exitOnSuccess(String response) {
+                finish();
                 System.exit(0);
             }
 
@@ -72,8 +87,6 @@ public class MainActivity extends Activity {
             public void exitOnCancel(String cancel) {
                 Toast.makeText(MainActivity.this, cancel, Toast.LENGTH_SHORT).show();
             }
-
-
         });
     }
 

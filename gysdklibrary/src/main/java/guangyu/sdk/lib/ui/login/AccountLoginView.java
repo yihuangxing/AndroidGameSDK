@@ -49,7 +49,9 @@ public class AccountLoginView extends BaseLinearLayout implements View.OnClickLi
             if (null != mBtnLogin && null != mAccountLoginListener) {
                 mAccountLoginListener.onBtnLogin();
             }
-        } else if (id == R.id.mgygamesdk_btn_account_register) {
+        }
+
+        else if (id == R.id.mgygamesdk_btn_account_register) {
             if (null != mBtnRegister && null != mAccountLoginListener) {
                 mAccountLoginListener.onBtnRegister();
             }

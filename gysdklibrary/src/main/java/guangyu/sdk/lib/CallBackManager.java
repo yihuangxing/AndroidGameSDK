@@ -1,5 +1,9 @@
-package guangyu.sdk.lib.notify;
+package guangyu.sdk.lib;
 
+import guangyu.sdk.lib.notify.GYExitCallBack;
+import guangyu.sdk.lib.notify.GYLoginCallBack;
+import guangyu.sdk.lib.notify.GYRealNameCallBack;
+import guangyu.sdk.lib.notify.GYUserCenterCallBack;
 import guangyu.sdk.lib.utils.LogUtils;
 
 /**
@@ -11,6 +15,17 @@ public class CallBackManager {
     public static GYLoginCallBack sGYLoginCallBack;
     public static GYUserCenterCallBack sGYUserCenterCallBack;
     public static GYExitCallBack sGYExitCallBack;
+    public static GYRealNameCallBack sGYRealNameCallBack;
+
+    public static GYRealNameCallBack getGYRealNameCallBack() {
+        return sGYRealNameCallBack;
+    }
+
+    public static void setGYRealNameCallBack(GYRealNameCallBack GYRealNameCallBack) {
+        sGYRealNameCallBack = GYRealNameCallBack;
+    }
+
+
 
     public static GYExitCallBack getGYExitCallBack() {
         return sGYExitCallBack;
@@ -48,6 +63,9 @@ public class CallBackManager {
         }
         if (null != sGYExitCallBack) {
             sGYExitCallBack = null;
+        }
+        if (null!=sGYRealNameCallBack){
+            sGYRealNameCallBack=null;
         }
         LogUtils.d("call back manager clear success");
     }

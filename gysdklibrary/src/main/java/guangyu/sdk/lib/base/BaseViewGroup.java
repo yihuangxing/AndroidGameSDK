@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -19,9 +19,8 @@ import guangyu.sdk.lib.R;
 public class BaseViewGroup extends LinearLayout implements View.OnClickListener {
     protected Context mContext;
     protected LayoutInflater mInflater;
-
-    private Button mButtonBack;
-    private Button mButtonClose;
+    private ImageView mButtonBack;
+    private ImageView mButtonClose;
     private RelativeLayout mLayoutContent;
 
     public RelativeLayout getLayoutContent() {
@@ -45,7 +44,7 @@ public class BaseViewGroup extends LinearLayout implements View.OnClickListener 
 
 
     public void addTitleBar() {
-        View titleBar = mInflater.inflate(R.layout.activity_gy_titlebar, null);
+        View titleBar = mInflater.inflate(R.layout.activity_gy_view_group, null);
         titleBar.findViewById(R.id.mgygamesdk_content);
         mButtonBack = titleBar.findViewById(R.id.mgygamesdk_btn_back);
         mButtonClose = titleBar.findViewById(R.id.mgygamesdk_btn_close);
@@ -79,6 +78,10 @@ public class BaseViewGroup extends LinearLayout implements View.OnClickListener 
 
     public void setBaseViewGroupListener(BaseViewGroupListener baseViewGroupListener) {
         mBaseViewGroupListener = baseViewGroupListener;
+    }
+
+    public ImageView getButtonBack() {
+        return mButtonBack;
     }
 
     public interface BaseViewGroupListener {

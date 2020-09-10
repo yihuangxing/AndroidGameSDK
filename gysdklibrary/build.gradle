@@ -1,6 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('E:\\2144WorkSpace\\androidsdkkeystore.jks')
+            storePassword 'android'
+            keyAlias '2144sdk'
+            keyPassword 'android'
+        }
+        release {
+            storeFile file('E:\\2144WorkSpace\\androidsdkkeystore.jks')
+            storePassword 'android'
+            keyAlias '2144sdk'
+            keyPassword 'android'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
@@ -18,10 +32,16 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 }
 
 dependencies {
-    implementation files('libs\\support-v4-19.1.0.jar')
+//    implementation files('libs\\support-v4-19.1.0.jar')
 }

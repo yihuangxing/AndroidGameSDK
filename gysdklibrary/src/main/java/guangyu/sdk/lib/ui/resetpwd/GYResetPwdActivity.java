@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import guangyu.sdk.lib.GYSDK;
 import guangyu.sdk.lib.GYSDKConfig;
 import guangyu.sdk.lib.R;
 import guangyu.sdk.lib.base.GYBaseActivity;
@@ -18,7 +19,7 @@ public class GYResetPwdActivity extends GYBaseActivity {
 
     @Override
     protected int getLayoutView() {
-        return GYSDKConfig.ORIENTATION ? R.layout.activity_gy_reset_pwd_portrait : R.layout.activity_gy_reset_pwd_landscape;
+        return GYSDK.ORIENTATION ? R.layout.activity_gy_reset_pwd_portrait : R.layout.activity_gy_reset_pwd_landscape;
     }
 
     @Override

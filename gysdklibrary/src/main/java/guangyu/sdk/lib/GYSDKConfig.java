@@ -8,9 +8,8 @@ package guangyu.sdk.lib;
 public class GYSDKConfig {
 
     public static String APP_KEY;
+    public static String APP_SECRET;
     public static String APP_SLUG;
-    //默认竖屏
-    public static boolean ORIENTATION;
     //默认false为开启
     public static boolean DEBUG;
 

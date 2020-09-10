@@ -68,8 +68,23 @@
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
     <!-- 官方 CardView 定义-->
-    
+
     <color name="white">#ffffff</color>
     <color name="color_0cacff">#0cacff</color>
     <color name="color_3dbdff">#3dbdff</color>
+
+    <!--   关闭按钮样式-->
+    <style name="gygamesdk_btn_close_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">17dp</item>
+    </style>
+    <!--返回按钮样式-->
+    <style name="gygamesdk_btn_back_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
 </resources>
