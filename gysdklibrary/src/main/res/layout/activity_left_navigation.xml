@@ -34,9 +34,5 @@
             android:text="返回游戏"
             android:textColor="#333"
             android:textSize="10sp" />
-
-
     </LinearLayout>
-
-
 </RelativeLayout>

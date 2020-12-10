@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="78dp"
     android:layout_alignParentBottom="true"
     android:orientation="vertical">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/gygamesdk_navitation_back"
+        android:layout_width="78dp"
         android:layout_height="78dp"
-        android:layout_alignParentBottom="true">
+        android:background="@color/white"
+        android:padding="28dp"
+        android:src="@drawable/gy_back_selector" />
+
+
+    <LinearLayout
+        android:id="@+id/gygamesdk_navitation_back_game"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/gygamesdk_navitation_back"
-            android:layout_width="78dp"
-            android:layout_height="78dp"
-            android:background="@color/white"
-            android:padding="28dp"
-            android:src="@drawable/gy_back_selector" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/gy_return_selector" />
 
-
-        <LinearLayout
-            android:id="@+id/gygamesdk_navitation_back_game"
-            android:layout_width="78dp"
-            android:layout_height="78dp"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/gy_return_selector" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="返回游戏"
-                android:textColor="#333"
-                android:textSize="10sp" />
-        </LinearLayout>
-    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回游戏"
+            android:textColor="#333"
+            android:textSize="10sp" />
+    </LinearLayout>
 </RelativeLayout>

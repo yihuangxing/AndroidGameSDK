@@ -14,6 +14,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         GYSDK.setDebug(false);
-        GYSDK.init(this, "1111", "2222", "2144game", false);
+        GYSDK.init(this, "1111", "2222", "2144game", true);
     }
 }
